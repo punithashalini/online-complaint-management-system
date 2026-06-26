@@ -177,18 +177,6 @@ http://localhost:8081/index.html
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of:
-
-- Login Page
-- Register Page
-- User Dashboard
-- Complaint Form
-- My Complaints
-- Admin Dashboard
-
----
 
 ## 👩‍💻 Author
 
