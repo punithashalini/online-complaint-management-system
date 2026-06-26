@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Raise Complaint</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Smart Complaint</h2>
+
+        <ul>
+
+            <li onclick="window.location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+            <li class="active">
+
+                <i class="fa-solid fa-circle-plus"></i>
+
+                Raise Complaint
+
+            </li>
+
+            <li onclick="window.location.href='mycomplaints.html'">
+
+                <i class="fa-solid fa-list"></i>
+
+                My Complaints
+
+            </li>
+
+            <li onclick="logout()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header>
+
+            <div>
+
+                <h1>Raise Complaint</h1>
+
+                <p id="welcomeUser">
+
+                    Welcome
+
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- Complaint Form -->
+
+        <section class="table-section">
+
+            <h2>Complaint Details</h2>
+
+            <form id="complaintForm">
+
+                <div style="margin-bottom:20px;">
+
+                    <label><b>Complaint Title</b></label>
+
+                    <input
+                            type="text"
+                            id="title"
+                            placeholder="Enter Complaint Title"
+                            required>
+
+                </div>
+
+                <div style="margin-bottom:20px;">
+
+                    <label><b>Description</b></label>
+
+                    <textarea
+                            id="description"
+                            rows="6"
+                            placeholder="Describe your complaint"
+                            required></textarea>
+
+                </div>
+
+                <div style="margin-bottom:25px;">
+
+                    <label><b>Priority</b></label>
+
+                    <select id="priority">
+
+                        <option value="LOW">
+
+                            LOW
+
+                        </option>
+
+                        <option value="MEDIUM">
+
+                            MEDIUM
+
+                        </option>
+
+                        <option value="HIGH">
+
+                            HIGH
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit">
+
+                    Submit Complaint
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/complaint.js"></script>
+
+</body>
+
+</html>

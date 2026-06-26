@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Smart Complaint</h2>
+
+        <ul>
+
+            <li onclick="showDashboard()">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+            <li onclick="showUsers()">
+
+                <i class="fa-solid fa-users"></i>
+
+                Users
+
+            </li>
+
+            <li onclick="showComplaints()">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                Complaints
+
+            </li>
+
+            <li onclick="logout()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>Admin Dashboard</h1>
+
+            <h3 id="adminName">
+                Welcome Admin
+            </h3>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards" id="dashboardSection">
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h2 id="totalUsers">0</h2>
+
+                <p>Total Users</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-file-circle-exclamation"></i>
+
+                <h2 id="totalComplaints">0</h2>
+
+                <p>Total Complaints</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2 id="pendingCount">0</h2>
+
+                <p>Pending</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2 id="resolvedCount">0</h2>
+
+                <p>Resolved</p>
+
+            </div>
+
+        </section>
+
+        <!-- Users -->
+
+        <section class="table-section" id="usersSection">
+
+            <h2>Users</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="userTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Complaints -->
+
+        <section class="table-section" id="complaintsSection">
+
+            <h2>Complaints</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Title</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Update</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="complaintTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

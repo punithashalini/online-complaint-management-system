@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Smart Complaint</h2>
+
+        <ul>
+
+            <li class="active">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+            <li onclick="window.location.href='complaint.html'">
+
+                <i class="fa-solid fa-circle-plus"></i>
+
+                Raise Complaint
+
+            </li>
+
+            <li onclick="window.location.href='mycomplaints.html'">
+
+                <i class="fa-solid fa-list"></i>
+
+                My Complaints
+
+            </li>
+
+            <li onclick="logout()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header>
+
+            <div>
+
+                <h1>User Dashboard</h1>
+
+                <p id="welcomeUser">
+                    Welcome User
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- Welcome Card -->
+
+        <section class="welcome-card">
+
+            <h2>Your Voice Matters</h2>
+
+            <p>
+
+                Raise complaints easily and track their
+                status until they are resolved.
+
+            </p>
+
+        </section>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-file-circle-plus"></i>
+
+                <h2 id="totalComplaints">
+
+                    0
+
+                </h2>
+
+                <p>Total Complaints</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2 id="pendingCount">
+
+                    0
+
+                </h2>
+
+                <p>Pending</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-spinner"></i>
+
+                <h2 id="progressCount">
+
+                    0
+
+                </h2>
+
+                <p>In Progress</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2 id="resolvedCount">
+
+                    0
+
+                </h2>
+
+                <p>Resolved</p>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Complaints -->
+
+        <section class="table-section">
+
+            <h2>My Complaints</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Title</th>
+
+                    <th>Priority</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="complaintTable">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
